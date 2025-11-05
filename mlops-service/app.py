@@ -171,10 +171,10 @@ rebuild_prometheus_metrics_from_db()
 @app.route('/')
 def dashboard():
     """
-    Serve the MLOps dashboard
+    Serve the MLOps dashboardp
     """
     try:
-        with open('dashboard.html', 'r') as f:
+        with open('dashboard.html', 'r', encoding='utf-8') as f:
             return f.read()
     except FileNotFoundError:
         return jsonify({
